@@ -1,0 +1,64 @@
+.App {
+  text-align: center;
+  
+}
+
+body {
+  background: linear-gradient(#8fbc8f, #f5deb3);
+  height: 100vh;
+}
+
+.taskList {
+  position: absolute;
+  padding-left: 5%;
+  
+}
+
+.musicPlayer {
+  position: absolute;
+  bottom: 0;
+  padding-left: 5%;
+}
+
+.playlist {
+  position: absolute;
+  bottom: 0;
+  margin-left: 85%;
+}
+
+.time {
+  position: absolute;
+  margin-left: 85%;
+  /* padding-left: 85%; */
+  background-color: violet;
+  text-align: center;
+}
+
+.imagePlayer {
+  position: absolute;
+  /* height: 28%; */
+  width: 40%;
+  bottom: 450px;
+  padding-left: 5%;
+  text-align: center;
+  
+}
+.images {
+  width: 100%;
+  position: absolute;
+  /* text-align: center; */
+  vertical-align: middle;
+  align-items: center;
+  border: 5px double #9DA49C;
+}
+.input {
+margin-top: 5%;
+border-style: none;
+background: transparent;
+}
+.input:focus {
+  outline-style: none;
+}
+.task_title {
+  margin-bottom: 0%;
+}
