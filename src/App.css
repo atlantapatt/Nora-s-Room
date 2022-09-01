@@ -1,64 +1,44 @@
 .App {
   text-align: center;
-  
+  background-color: #d9d9d9;
 }
 
-body {
-  background: linear-gradient(#8fbc8f, #f5deb3);
-  height: 100vh;
+.list_clothes{
+  display: flex;
+  padding: 5px;
 }
 
-.taskList {
-  position: absolute;
-  padding-left: 5%;
-  
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.musicPlayer {
-  position: absolute;
-  bottom: 0;
-  padding-left: 5%;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-.playlist {
-  position: absolute;
-  bottom: 0;
-  margin-left: 85%;
-}
-
-.time {
-  position: absolute;
-  margin-left: 85%;
-  /* padding-left: 85%; */
-  background-color: violet;
-  text-align: center;
-}
-
-.imagePlayer {
-  position: absolute;
-  /* height: 28%; */
-  width: 40%;
-  bottom: 450px;
-  padding-left: 5%;
-  text-align: center;
-  
-}
-.images {
-  width: 100%;
-  position: absolute;
-  /* text-align: center; */
-  vertical-align: middle;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  border: 5px double #9DA49C;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
-.input {
-margin-top: 5%;
-border-style: none;
-background: transparent;
+
+.App-link {
+  color: #61dafb;
 }
-.input:focus {
-  outline-style: none;
-}
-.task_title {
-  margin-bottom: 0%;
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
