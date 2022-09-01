@@ -1,10 +1,11 @@
-import {image} from 'src/highwaistjeans.jpg'
+import './ClothesCard.css'
 function ClothesCard({data}) {
     return(
-        <div>
-            <img className="image" src='/highwaistjeans.jpg' alt="" ></img>
-            <h4>{data.name}</h4>
+        <div className="clothes_card">
+            <img className="clothes_image" src={data.image} ></img>
+            <h4 className='item_name'>{data.name}</h4>
             <p>{data.price}</p>
+            <button className='add_cart_button'>Add To Cart</button>
         </div>
     )
 }

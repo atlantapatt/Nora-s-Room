@@ -1,4 +1,27 @@
-.image{
-    height: 50px;
-    width: 50px;
+.clothes_image{
+    width: 95px;
+    height: 150px;
+}
+.clothes_card{
+    background-color: blue;
+    width: min-content;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.item_name{
+    margin: 0%;
+    height: 65px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    
+}
+
+.add_cart_button{
+
+}
+
+.list_clothes{
+    width: max-content;
 }

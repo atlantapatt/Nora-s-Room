@@ -1,0 +1,30 @@
+.title{
+    padding-top: 8px;
+    width: fit-content;
+    margin-left: 40%;
+}
+
+#icon{
+    padding-left: 95%;
+}
+.filters{
+    display: inline-block;
+    width: min-content;
+    margin-left: -95%;
+    padding-left: 1%;
+}
+
+#filters{
+    background-color: #d9d9d9;
+    border: none;
+}
+
+#filters:focus{
+    outline: none;
+    border: none;
+}
+
+.bottom_nav{
+    display: flex;
+    align-items: center;
+}
