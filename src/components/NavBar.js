@@ -18,12 +18,6 @@ function Navbar({setCategory, setFilter}) {
                         <option>Jackets</option>
                         <option>Tops</option>
                     </select>
-
-                    <select id='filters' className='filter' onChange={(e) => setFilter(e.target.value)}>
-                        <option value='all'>Filter By...</option>
-                        <option>Name</option>
-                        <option>Price</option>
-                    </select>
                 </div>
             </div>
         </div>
