@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 function App() {
   const [clothes, setClothes] = useState([])
   const [category, setCategory] = useState('all')
-  const [filter, setFilter] = useState('')
+  
 
   useEffect(() => {
     fetch("http://localhost:9292/clothes")
@@ -25,19 +25,18 @@ function App() {
     } else
     return clothes.category == category
   })
-  console.log(clothesCategory)
-  console.log(category)
-  // console.log(clothesCategory)
+  
+
+
   const listofClothes = clothesCategory.map((data) => {
     return <ClothesCard data={data} />
   })
 
-  console.log(listofClothes)
 
   
   return (
     <div className="App">
-      <Navbar setFilter={setFilter} setCategory={setCategory}/>
+      <Navbar  setCategory={setCategory}/>
       <div className='list_clothes'>
         {listofClothes}
       </div>
