@@ -1,5 +1,5 @@
 import './NavBar.css'
-function Navbar({setCategory, setFilter}) {
+function Navbar({setCategory, setLocation}) {
 
     return(
         <div className="Navbar">
@@ -17,6 +17,13 @@ function Navbar({setCategory, setFilter}) {
                         <option>Bottoms</option>
                         <option>Jackets</option>
                         <option>Tops</option>
+                        <option>Dresses</option>
+                    </select>
+                    <select id='filters' onChange={(e) => setLocation(e.target.value)}>
+                        <option value="all">Store Location...</option>
+                        <option value='1'>Los Angeles</option>
+                        <option value='2'>New York</option>
+                        <option value='3'>Seattle</option>
                     </select>
                 </div>
             </div>
