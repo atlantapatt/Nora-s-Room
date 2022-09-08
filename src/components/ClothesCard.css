@@ -7,9 +7,13 @@
     width: min-content;
     padding: 5px;
     margin-left: 5px;
+    margin-bottom: 5px;
+    /* margin-bottom: 50px; */
 }
 
 .clothes{
+    width: min-content;
+    display: inline-block;
     
 }
 .item_name{
@@ -21,10 +25,12 @@
     
 }
 
-.add_cart_button{
-
+.reviews{
+    display: flex;
+    background-color: purple;
+    margin-left: 5px;
 }
 
 .list_clothes{
-    
+
 }

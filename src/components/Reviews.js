@@ -1,14 +1,8 @@
 import { useEffect, useState } from "react"
 import Username from "./Username"
 
-function Reviews({data})  {
-    const [ratings, setRatings] = useState([])
-    
-    useEffect(() => {
-        fetch("http://localhost:9292/reviews")
-        .then((r) => r.json())
-        .then((data) => setRatings(data))
-      },[])
+function Reviews({data, ratings})  {
+   
 
     
 

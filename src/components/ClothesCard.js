@@ -1,17 +1,27 @@
 import { useState } from 'react'
 import './ClothesCard.css'
 import Reviews from './Reviews'
-function ClothesCard({data}) {
+import {useNavigate} from "react-router-dom"
+function ClothesCard({data, url, setUrl, ratings}) {
     const [isShown, setIsShown] = useState(false)
+
+    let navigate = useNavigate()
 
     function handleClick(e) {
         e.preventDefault()
         setIsShown(!isShown)
     }
+
+    function routeChangeClick() {
+        setUrl(`/${data.id}`)
+        console.log(url)
+        let path = url
+        navigate(url)
+    }
     return(
         <div className="clothes">
             <div className='clothes_card'>
-                <img className="clothes_image" src={data.image} ></img>
+                <img className="clothes_image" src={data.image} onClick={routeChangeClick} ></img>
                 <h4 className='item_name'>{data.name}</h4>
                 <h5>{data.brand}</h5>
                 <p>${data.price}</p>
@@ -20,7 +30,7 @@ function ClothesCard({data}) {
                 
             </div>
             <div className='reviews'>
-                    {isShown ? <Reviews data={data}/> : null}
+                    {isShown ? <Reviews data={data} ratings={ratings}/> : null}
             </div>
         </div>
     )
