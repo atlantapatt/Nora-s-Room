@@ -1,4 +1,5 @@
-import Reviews from "./Reviews"
+import IndividualCard from './IndividualCard'
+import './ItemCard.css'
 import Username from "./Username"
 function ItemCard({clothes, url, ratings}) {
 
@@ -18,20 +19,16 @@ function ItemCard({clothes, url, ratings}) {
     // console.log(item)
     let mappedItem = item.map((item) => {
         return (
-            <div>
-                <h3>{item.name}</h3>
-                <img src={item.image}></img>
-                <p>{item.brand}</p>
-                <p>{item.price}</p>
-            </div>
+           <IndividualCard item={item}/>
         )
     })
     let mappedReview = review.map((review) => {
         return (
-            <div>
+            <div className="review-div">
+                <h5>REVIEWS</h5>
                 <Username reviewID={review.user_id} />
-                <p>{review.rating}/5</p>
-                <p>{review.comment}</p>
+                <p className="review-rating">{review.rating}/5</p>
+                <p className="review-comment">{review.comment}</p>
             </div>
         )
     })
@@ -41,6 +38,12 @@ function ItemCard({clothes, url, ratings}) {
         <div>
             {mappedItem}
             {mappedReview}
+            <form className='user-review'>
+                <lable>Username:</lable> <br></br>
+                <input type='text'></input> <br></br>
+                <textarea>Write Review Here...</textarea> <br></br>
+                <input type='submit' value='submit'></input>
+            </form>
         </div>
     )
 }

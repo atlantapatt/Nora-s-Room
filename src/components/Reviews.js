@@ -2,10 +2,6 @@ import { useEffect, useState } from "react"
 import Username from "./Username"
 
 function Reviews({data, ratings})  {
-   
-
-    
-
 
     let filteredReviews = ratings.filter((review) => {
         return review.clothes_id == data.id 
