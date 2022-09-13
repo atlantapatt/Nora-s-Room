@@ -1,7 +1,7 @@
 import IndividualCard from './IndividualCard'
 import './ItemCard.css'
 import Username from "./Username"
-function ItemCard({clothes, url, ratings}) {
+function ItemCard({clothes, url, ratings, users, setUsers, currentUser}) {
 
     let urlNumber = url.split('').pop()
     console.log(urlNumber)
@@ -26,7 +26,7 @@ function ItemCard({clothes, url, ratings}) {
         return (
             <div className="review-div">
                 <h5>REVIEWS</h5>
-                <Username reviewID={review.user_id} />
+                <Username users={users} setUsers={setUsers} reviewID={review.user_id} />
                 <p className="review-rating">{review.rating}/5</p>
                 <p className="review-comment">{review.comment}</p>
             </div>
@@ -39,8 +39,8 @@ function ItemCard({clothes, url, ratings}) {
             {mappedItem}
             {mappedReview}
             <form className='user-review'>
-                <lable>Username:</lable> <br></br>
-                <input type='text'></input> <br></br>
+                <lable>{currentUser}</lable> <br></br>
+                {/* <input type='text'></input> <br></br> */}
                 <textarea>Write Review Here...</textarea> <br></br>
                 <input type='submit' value='submit'></input>
             </form>

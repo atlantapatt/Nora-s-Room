@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Username from "./Username"
 
-function Reviews({data, ratings})  {
+function Reviews({data, ratings, users, setUsers})  {
 
     let filteredReviews = ratings.filter((review) => {
         return review.clothes_id == data.id 
@@ -10,7 +10,7 @@ function Reviews({data, ratings})  {
     let reviews = filteredReviews.map((review) => {
         return (
             <div className="review">
-            <Username reviewID={review.user_id} />
+            <Username users={users} setUsers={setUsers} reviewID={review.user_id} />
             <p>{review.rating}/5</p>
             <p>{review.comment}</p>
             </div>

@@ -1,0 +1,45 @@
+.users{
+    background-color: lightblue;
+    text-align: left;
+    display: flex;
+}
+
+.join-form{
+    width: 100%;
+}
+
+.join{
+    padding-left: 45%;
+    text-align: center;
+    display: flex;
+}
+
+.form{
+    padding-left: 30%;
+    display: flex;
+}
+
+.list-users{
+    padding-left: 5%;
+    background-color: green;
+    padding-right: 10%;
+}
+
+.left{
+    width: min-content;
+}
+
+.right{
+    width: min-content;
+    margin-top: -116.5%;
+    margin-left: 120%;
+}
+
+.submit{
+    
+}
+
+.button{
+    margin-top: 50%;
+    margin-left: 95%;
+}

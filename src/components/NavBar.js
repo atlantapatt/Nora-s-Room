@@ -1,15 +1,28 @@
+import { useNavigate } from 'react-router-dom'
 import './NavBar.css'
-function Navbar({setCategory, setLocation}) {
+function Navbar({setCategory, setLocation, setUrl}) {
 
+    let navigate = useNavigate()
+
+    function routeHome() {
+        navigate('/')
+        setUrl('')
+    }
+
+    function routeUsers() {
+        navigate('/users')
+    }
+    
     return(
         <div className="Navbar">
             <div className='top_nav'>
-                <div className='title' >
-                    NORA'SROOM
+                <div className='title' onClick={routeHome} >
+                    <p>NORA'S ROOM</p>
                 </div>
             </div>
             <div className='bottom_nav'>
-                <i id="icon" className="fa-solid fa-cart-shopping"></i>
+                <i id="icon" className="fa-solid fa-cart-shopping" ></i>
+                <i id='icon-2' class="fa-solid fa-users" onClick={routeUsers}></i>
                 <div className='filters'>
         
                     <select defaultValue='all' id='filters' className='category' onChange={(e) => setCategory(e.target.value)}>

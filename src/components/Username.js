@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react"
 
-function Username({reviewID}) {
-    const [users, setUsers] = useState([
-        {
-            id: 1,
-            username: "harshoutfit"
-        }
-    ])
+function Username({reviewID, users, setUsers}) {
+    
     
 
 

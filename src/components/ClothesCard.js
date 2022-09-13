@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './ClothesCard.css'
 import Reviews from './Reviews'
 import {useNavigate} from "react-router-dom"
-function ClothesCard({data, url, setUrl, ratings}) {
+function ClothesCard({data, url, setUrl, ratings, users, setUsers}) {
     const [isShown, setIsShown] = useState(false)
 
     let navigate = useNavigate()
@@ -30,7 +30,7 @@ function ClothesCard({data, url, setUrl, ratings}) {
                 
             </div>
             <div className='reviews'>
-                    {isShown ? <Reviews data={data} ratings={ratings}/> : null}
+                    {isShown ? <Reviews users={users} setUsers={setUsers} data={data} ratings={ratings}/> : null}
             </div>
         </div>
     )
