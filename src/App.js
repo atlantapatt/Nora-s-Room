@@ -20,7 +20,7 @@ function App() {
     }
 ])
   const [username, setUsername] = useState('')
-  const [currentUser, setCurrentUser] = useState('')
+  const [currentUser, setCurrentUser] = useState([])
 console.log(currentUser)
   useEffect(() => {
     fetch("http://localhost:9292/clothes")
@@ -62,7 +62,7 @@ console.log(clothesLocation)
 
 
   const listofClothes = clothesCategory.map((data) => {
-    return <ClothesCard users={users} setUsers={users} data={data} url={url} setUrl={setUrl} ratings={ratings} />
+    return <ClothesCard users={users} setUsers={users} data={data} url={url} setUrl={setUrl} ratings={ratings}  />
   })
 
 console.log(listofClothes)
@@ -74,8 +74,8 @@ console.log(listofClothes)
           
           <Switch>
             <Route exact path='/' element={listofClothes}></Route>
-            <Route exact path={url} element={<ItemCard currentUser={currentUser} users={users} setUsers={setUsers} clothes={clothes} url={url} ratings={ratings}/>}></Route>
-            <Route exact path='/users' element={<Users username={username} setUsername={setUsername} users={users} setCurrentUser={setCurrentUser} />}></Route>
+            <Route exact path={url} element={<ItemCard currentUser={currentUser} users={users} setUsers={setUsers} clothes={clothes} url={url} ratings={ratings} setRatings={setRatings}/>}></Route>
+            <Route exact path='/users' element={<Users username={username} setUsername={setUsername} users={users} setCurrentUser={setCurrentUser} setUsers={setUsers} />}></Route>
           </Switch>
           </div>
         </Router>
