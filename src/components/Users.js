@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
 import './User.css'
-function Users({users, username, setUsername, setCurrentUser}) {
+function Users({users, setUsers, username, setUsername, setCurrentUser}) {
 
+    console.log(users.length + 1)
     function handleSubmit(e) {
         e.preventDefault()        
         fetch('http://localhost:9292/users', {
@@ -10,10 +11,18 @@ function Users({users, username, setUsername, setCurrentUser}) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                username: username
+                username: username,
+                id: users.length+1
             })
         })
-        setCurrentUser(username)
+        .then((r) => r.json())
+        .then((newUser) => setUsers([...users, newUser]))
+
+        setCurrentUser([{
+            username: username,
+            id: users.length+1
+        }])
+        window.location.reload(false);
     }
 
     console.log(username)

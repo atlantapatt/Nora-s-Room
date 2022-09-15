@@ -5,11 +5,7 @@ function Username({reviewID, users, setUsers}) {
     
 
 
-    useEffect(() => {
-        fetch('http://localhost:9292/users')
-        .then((r) => r.json())
-        .then((data) => setUsers(data))
-    },[])
+    
 
    
 
