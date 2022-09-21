@@ -30,25 +30,15 @@ function ItemCard({clothes, url, ratings, users, setUsers, currentUser, setRatin
         })
         .then((r) => r.json())
         .then((newReview) => setRatings([...ratings, newReview]))
+
+        let text = document.getElementById('text')
+        text.value = ''
+
+        let radio = document.getElementById('radio')
+        radio.checked = false
+        
     }
     console.log(ratings)
-    // function handleSubmit(e) {
-    //     e.preventDefault()        
-    //     fetch('http://localhost:9292/users', {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify({
-    //             rating: ratingValue,
-    //             comment: currentReview,
-    //             clothes_id: urlNumber,
-    //             user_id: users[users.length-1]
-    //         })
-    //     })
-    //     .then((r) => r.json())
-    //     .then((newReview) => setRatings([...ratings, newReview]))
-    // }
 
     
 
@@ -69,17 +59,36 @@ function ItemCard({clothes, url, ratings, users, setUsers, currentUser, setRatin
         )
     })
     console.log(users.length)
+
+    function handleDeleteReview(id) {
+       const updatedReviews = ratings.filter((review) => review.id !== id)
+        setRatings(updatedReviews)
+      }
+
+    function handleUpdateReview(newRating) {
+        const updatedReviews = ratings.map((rating) => {
+            if(rating.id === newRating.id) {
+                return newRating
+            } else {
+                return rating
+            }
+        })
+        setRatings(updatedReviews)
+    }
+
     let mappedReview = review.map((review) => {
         return (
             <div className="review-div">
                 <Username users={users} setUsers={setUsers} reviewID={review.user_id} />
                 <p className="review-rating">{review.rating}/5</p>
                 <p className="review-comment">{review.comment}</p>
-                {review.id == ratings.length ? <Edit /> : <p>no hello</p>}
+                {review.id == ratings.length ? <Edit handleUpdateReview={handleUpdateReview} handleDeleteReview={handleDeleteReview} reviewId={review.id}/> : null}
             </div>
         )
     })
 console.log(currentUser)
+
+    
 
     return(
         <div>
@@ -90,17 +99,17 @@ console.log(currentUser)
                 <lable>{currentUser.username}</lable> <br></br>
                 <div className='radio'>
                 <lable>1</lable>
-                <input onClick={((e) => setRatingValue(e.target.value))} value='1' name='rating' type='radio'></input> 
+                <input id='radio' onClick={((e) => setRatingValue(e.target.value))} value='1' name='rating' type='radio'></input> 
                 <lable>2</lable>
-                <input onClick={((e) => setRatingValue(e.target.value))} value='2' name='rating' type='radio'></input>
+                <input id='radio' onClick={((e) => setRatingValue(e.target.value))} value='2' name='rating' type='radio'></input>
                 <lable>3</lable>
-                <input onClick={((e) => setRatingValue(e.target.value))} value='3' name='rating' type='radio'></input>
+                <input id='radio' onClick={((e) => setRatingValue(e.target.value))} value='3' name='rating' type='radio'></input>
                 <lable>4</lable>
-                <input onClick={((e) => setRatingValue(e.target.value))} value='4' name='rating' type='radio'></input>
+                <input id='radio' onClick={((e) => setRatingValue(e.target.value))} value='4' name='rating' type='radio'></input>
                 <lable>5</lable>
-                <input onClick={((e) => setRatingValue(e.target.value))} value='5' name='rating' type='radio'></input><br></br>
+                <input id='radio' onClick={((e) => setRatingValue(e.target.value))} value='5' name='rating' type='radio'></input><br></br>
                 </div>
-                <textarea onChange={((e) => setCurrentReview(e.target.value))} placeholder='Write Review Here...'></textarea> <br></br>
+                <textarea id='text' onChange={((e) => setCurrentReview(e.target.value))} placeholder='Write Review Here...'></textarea> <br></br>
                 <input onClick={submit} type='submit' value='submit'></input>
             </form>
         </div>
