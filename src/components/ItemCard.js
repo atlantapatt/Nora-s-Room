@@ -94,7 +94,9 @@ console.log(currentUser)
         <div>
             {mappedItem}
             <h5>REVIEWS</h5>
+            <div className='wrapped-reviews'>
             {mappedReview}
+            </div>
             <form className='user-review'>
                 <lable>{currentUser.username}</lable> <br></br>
                 <div className='radio'>

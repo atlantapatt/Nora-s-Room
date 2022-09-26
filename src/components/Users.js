@@ -22,7 +22,6 @@ function Users({users, setUsers, username, setUsername, setCurrentUser}) {
             username: username,
             id: users.length+1
         }])
-        window.location.reload(false);
     }
 
     console.log(username)
@@ -43,7 +42,7 @@ function Users({users, setUsers, username, setUsername, setCurrentUser}) {
     return(
         <div className="users">
             <div className="list-users">
-                <p>Our Contributors</p>
+                <h4>Our Contributors</h4>
                 {mappedUsers}
             </div>
             <div className="join-form">

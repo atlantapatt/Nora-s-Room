@@ -1,5 +1,6 @@
+
 .users{
-    background-color: lightblue;
+    background-color: #aeaeae;
     text-align: left;
     display: flex;
 }
@@ -21,7 +22,9 @@
 
 .list-users{
     padding-left: 5%;
-    background-color: green;
+    background-color: #3c3c3c;
+    color: white;
+    text-align: center;
     padding-right: 10%;
 }
 
@@ -41,5 +44,5 @@
 
 .button{
     margin-top: 50%;
-    margin-left: 95%;
+    margin-left: 70%;
 }

@@ -21,11 +21,11 @@ function Username({reviewID, users, setUsers}) {
     // let username = filteredUsername.username
     let mappedUsername = filteredUsername.map((user) => {
         return (
-            <p>{user.username}</p>
+            <h5>{user.username}</h5>
         )
     })
 
-    console.log(mappedUsername)
+    // console.log(mappedUsername)
 
 
     return(

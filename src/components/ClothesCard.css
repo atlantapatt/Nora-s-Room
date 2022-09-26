@@ -21,14 +21,31 @@
     height: 65px;
     text-align: center;
     vertical-align: middle;
-    display: table-cell;
+    margin-bottom: -20%;
+    margin-top: 20%;
+    display: inline-table;
+
     
 }
 
 .reviews{
     display: flex;
-    background-color: #515151;
     margin-left: 5px;
+    width: min-content;
+
+}
+
+.review-div{
+    width: 155px;
+
+}
+
+.review{
+    display: inline;
+    margin-right: -25%;
+    width: fit-content;
+    text-align: center;
+    /* margin-left: 15px; */
 }
 
 .list_clothes{

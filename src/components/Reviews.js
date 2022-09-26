@@ -18,7 +18,7 @@ function Reviews({data, ratings, users, setUsers})  {
       })
 
     return(
-        <div>
+        <div className="review-div">
         {reviews[0]}
         </div>
     )
