@@ -12,9 +12,10 @@ The main page of this project currently allows you to see various clothes on the
 
 2. Click on the read reviews button to read the first review on an item.
 
-![Review Button](https://user-images.githubusercontent.com/99867479/192386168-6178d5a2-f3ae-4305-89be-90c255236fd8.gif)
+![review button](https://user-images.githubusercontent.com/99867479/192386914-8e471f6c-8142-4e10-afba-d413ea5c3b84.gif)
 
 3. Click on the people icon in the top right to get to the users page.
 4. When in the user page, fill out the information to join the contributor list.
 
-![userpage](https://user-images.githubusercontent.com/99867479/192386277-90852d75-ec50-4dd4-9cbd-32b680e4d0ae.gif)
+![userpage](https://user-images.githubusercontent.com/99867479/192386933-36d1a4e9-b196-49d0-88c3-e95a68deef5e.gif)
+
