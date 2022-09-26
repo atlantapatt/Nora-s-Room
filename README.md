@@ -19,3 +19,16 @@ The main page of this project currently allows you to see various clothes on the
 
 ![userpage](https://user-images.githubusercontent.com/99867479/192386933-36d1a4e9-b196-49d0-88c3-e95a68deef5e.gif)
 
+5. After becoming a user, you can now review the clothes on the website. Do this by double clicking on an item image to see it's details and care information as well as other reviews.
+6. By scrolling to the bottom of the page, you will see a text box and numbers above it. By entering your review and score, you can review the article of clothing!
+
+![write reviews](https://user-images.githubusercontent.com/99867479/192387241-83ff54f7-0501-4899-94dd-7a3d50ee3012.gif)
+
+7. You can edit your most recently posted review by clicking on the edit icon after you post your review. 
+
+![edit reviews](https://user-images.githubusercontent.com/99867479/192387333-befb4782-4d4e-442d-aacd-a225409e63a8.gif)
+
+8. Lastly, you can delete your most recently posted review all together by clicking the delete button.
+
+![delete reviews](https://user-images.githubusercontent.com/99867479/192387402-0020cb1c-9ddf-46d3-ba07-701475ec4a2f.gif)
+
