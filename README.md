@@ -39,5 +39,6 @@ The main page of this project currently allows you to see various clothes on the
 - Sinatra
 
 Inspired By Nordstrom
+
 Click here to see the backend: [Phase-3 Backend](https://github.com/atlantapatt/phase-3-sinatra-react-project)
 
