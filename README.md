@@ -32,3 +32,12 @@ The main page of this project currently allows you to see various clothes on the
 
 ![delete reviews](https://user-images.githubusercontent.com/99867479/192387402-0020cb1c-9ddf-46d3-ba07-701475ec4a2f.gif)
 
+## Built With
+- React
+- SQLite
+- Ruby
+- Sinatra
+
+Inspired By Nordstrom
+Click here to see the backend: ![phase-3 Backend](https://github.com/atlantapatt/phase-3-sinatra-react-project)
+
