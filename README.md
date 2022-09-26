@@ -7,11 +7,14 @@ The main page of this project currently allows you to see various clothes on the
 
 ## How to Use
 1. Click on the catetories in the top right to filter through the items.
+
 ![Categories](https://user-images.githubusercontent.com/99867479/192386091-93cb51bc-48d4-4a40-8ed9-6d20165273db.gif)
 
 2. Click on the read reviews button to read the first review on an item.
+
 ![Review Button](https://user-images.githubusercontent.com/99867479/192386168-6178d5a2-f3ae-4305-89be-90c255236fd8.gif)
 
 3. Click on the people icon in the top right to get to the users page.
 4. When in the user page, fill out the information to join the contributor list.
+
 ![userpage](https://user-images.githubusercontent.com/99867479/192386277-90852d75-ec50-4dd4-9cbd-32b680e4d0ae.gif)
