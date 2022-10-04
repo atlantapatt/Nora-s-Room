@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './ClothesCard.css'
-import Reviews from './Reviews'
+import Reviews from './Double Click/Reviews'
 import {useNavigate} from "react-router-dom"
 function ClothesCard({data, url, setUrl, ratings, users, setUsers}) {
     const [isShown, setIsShown] = useState(false)

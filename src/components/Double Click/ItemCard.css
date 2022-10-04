@@ -1,0 +1,41 @@
+.item-div{
+    background-color: grey;
+    padding-bottom: 15px;
+}
+
+.item-image{
+    display: flex;
+    padding-left: 10%;
+    height: fit-content;
+    padding-top: 5%;
+    
+}
+
+.item-text{
+    padding-left: 10%;
+    padding-top: 2%;
+}
+.item-info{
+    display: flex;
+    padding-left: 50px;
+}
+
+.item-other{
+    padding-left: 20%;
+    align-items: center;
+    padding-top: 2%;
+    padding-right: 20px;
+}
+
+.add-to-cart{
+    margin-top: 15%;
+    
+}
+
+.wrapped-reviews{
+    padding-left: 555px;
+    background-color: lightgray;
+}
+.review-div{
+    background-color: lightgray;
+}
