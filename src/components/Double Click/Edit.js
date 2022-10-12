@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Editing from './Editing'
 import './Edit.css'
 
-function Edit({reviewId, handleDeleteReview, handleUpdateReview}) {
+function Edit({reviewId, handleDeleteReview, handleUpdateReview, reviewComment}) {
     const [editing, setEditing] = useState(false)
     console.log(reviewId)
     function clickEdit() {
@@ -24,7 +24,7 @@ function Edit({reviewId, handleDeleteReview, handleUpdateReview}) {
             <i class="fa-solid fa-pen-to-square" onClick={((e) => clickEdit(e))}></i>
             
             <i class="fa-solid fa-trash" onClick={((e) => clickDelete(e))}></i>
-            {editing == true ? <Editing setEditing={setEditing} reviewId={reviewId} handleUpdateReview={handleUpdateReview} /> : null}
+            {editing == true ? <Editing setEditing={setEditing} reviewId={reviewId} reviewComment={reviewComment} handleUpdateReview={handleUpdateReview} /> : null}
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import IndividualCard from './IndividualCard'
 import Edit from './Edit'
 import './ItemCard.css'
@@ -7,11 +7,17 @@ function ItemCard({clothes, url, ratings, users, setUsers, currentUser, setRatin
 
     const [ratingValue, setRatingValue] = useState('')
     const [currentReview, setCurrentReview] = useState('')
-    // const [newReview, setNewReview] = useState('')
+    const [urlReview, setUrlReview] = useState([])
 
-    let urlNumber = url.split('').pop()
+    let urlNumber = url.split('/').pop()
     console.log(urlNumber)
-    console.log(currentReview)
+    console.log(url)
+
+    useEffect(() => {
+        fetch(`http://localhost:9292/clothes/${urlNumber}`)
+        .then((r) => r.json())
+        .then((data) => setUrlReview(data))
+      },[])
 
     function submit(e) {
         e.preventDefault() 
@@ -76,17 +82,23 @@ function ItemCard({clothes, url, ratings, users, setUsers, currentUser, setRatin
         setRatings(updatedReviews)
     }
 
+    const ids = ratings.map(obj => {
+        return obj.id
+    })
+
     let mappedReview = review.map((review) => {
+        console.log(review.id)
         return (
             <div className="review-div">
                 <Username users={users} setUsers={setUsers} reviewID={review.user_id} />
                 <p className="review-rating">{review.rating}/5</p>
                 <p className="review-comment">{review.comment}</p>
-                {review.id == ratings.length ? <Edit handleUpdateReview={handleUpdateReview} handleDeleteReview={handleDeleteReview} reviewId={review.id}/> : null}
+                {review.id == Math.max(...ids) ? <Edit handleUpdateReview={handleUpdateReview} handleDeleteReview={handleDeleteReview} reviewId={review.id} reviewComment={review.comment}/> : null}
             </div>
+            
         )
     })
-console.log(currentUser)
+console.log(ids)
 
     
 

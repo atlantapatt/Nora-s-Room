@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Editing({reviewId, handleUpdateReview, setEditing}) {
+function Editing({reviewId, handleUpdateReview, setEditing, reviewComment}) {
     const [value, setValue] = useState('')
     const [comment, setComment] = useState('')
     console.log(reviewId)
@@ -40,7 +40,7 @@ function Editing({reviewId, handleUpdateReview, setEditing}) {
                 <lable>5</lable>
                 <input onClick={((e) => setValue(e.target.value))} value='5' name='rating' type='radio'></input><br></br>
                 </div>
-                <textarea onChange={((e) => setComment(e.target.value))} placeholder='Edit Review Here...'></textarea> <br></br>
+                <textarea onChange={((e) => setComment(e.target.value))}>{reviewComment}</textarea> <br></br>
                 <input onClick={handleSubmit} type='submit' value='submit'></input>
             </form>
         </div>
