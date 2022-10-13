@@ -29,7 +29,7 @@ function ItemCard({clothes, url, ratings, users, setUsers, currentUser, setRatin
             body: JSON.stringify({
                 rating: ratingValue,
                 comment: currentReview,
-                clothes_id: urlNumber,
+                clothe_id: urlNumber,
                 user_id: users.length,
                 id: ratings.length+1
             })
@@ -37,6 +37,7 @@ function ItemCard({clothes, url, ratings, users, setUsers, currentUser, setRatin
         .then((r) => r.json())
         .then((newReview) => setRatings([...ratings, newReview]))
 
+        
         let text = document.getElementById('text')
         text.value = ''
 
@@ -49,7 +50,7 @@ function ItemCard({clothes, url, ratings, users, setUsers, currentUser, setRatin
     
 
     let review = ratings.filter((rating) => {
-        return rating.clothes_id == urlNumber
+        return rating.clothe_id == urlNumber
     })
 
     console.log(review)

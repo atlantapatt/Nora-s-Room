@@ -1,5 +1,5 @@
 import ClothesCard from './components/ClothesCard';
-import ItemCard from './components/ItemCard';
+import ItemCard from './components/Double Click/ItemCard';
 import Navbar from './components/NavBar';
 import Users from './components/Users';
 import './App.css';
@@ -66,6 +66,8 @@ console.log(clothesLocation)
   })
 
 console.log(listofClothes)
+
+
   
   return (
         <Router>

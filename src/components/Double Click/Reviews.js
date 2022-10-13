@@ -4,7 +4,7 @@ import Username from "./Username"
 function Reviews({data, ratings, users, setUsers})  {
 
     let filteredReviews = ratings.filter((review) => {
-        return review.clothes_id == data.id 
+        return review.clothe_id == data.id 
     })
       
     let reviews = filteredReviews.map((review) => {
